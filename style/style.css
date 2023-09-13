@@ -1,3 +1,5 @@
+/* DEFAULT  */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,19 +12,35 @@ footer {
   text-align: center;
   padding: 2rem;
 }
+
+/* HEADER  */
 .title {
   padding: 2rem;
 }
+
+/* MAIN  */
 .container {
   margin: 0 auto;
   max-width: 90%;
 }
+
+/* FORM  */
 .form_choose {
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
+.select_box {
+  gap: 1rem;
+}
+.select_box label {
+  color: rgb(235, 199, 199);
+}
+.form_choose select {
+  flex-basis: 30%;
+}
+
+/* SLOT PART  */
 .col_slot {
   display: flex;
   gap: 3rem;
@@ -35,3 +53,7 @@ footer {
   border-radius: 25px;
   padding: 2rem;
 }
+
+/* RESPONSE PART  */
+
+/* FOOTER  */
