@@ -13,12 +13,87 @@ footer {
   padding: 2rem;
 }
 
+/* LOADING  */
+.loader {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: hidden;
+}
+.loading {
+  background-color: black;
+  width: 10em;
+  height: 10em;
+  font-size: 25px;
+  box-sizing: border-box;
+  border-top: 0.3em solid hotpink;
+  border-radius: 50%;
+  position: relative;
+  animation: rotating 2s ease-in-out infinite;
+  --direction: 1;
+}
+
+.loading::before,
+.loading::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  box-sizing: border-box;
+  top: -0.2em;
+}
+
+.loading::before {
+  border-top: 0.3em solid dodgerblue;
+  transform: rotate(120deg);
+}
+
+.loading::after {
+  border-top: 0.3em solid gold;
+  transform: rotate(240deg);
+}
+
+.loading-message {
+  position: absolute;
+  color: white;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 10em;
+  font-family: sans-serif;
+  animation: rotating 2s linear infinite;
+  --direction: -1;
+}
+
+@keyframes rotating {
+  50% {
+    transform: rotate(calc(180deg * var(--direction)));
+  }
+
+  100% {
+    transform: rotate(calc(360deg * var(--direction)));
+  }
+}
+
+/* .hidden{
+  display: hidden;
+} */
 /* HEADER  */
 .title {
   padding: 2rem;
 }
 
 /* MAIN  */
+
 .container {
   margin: 0 auto;
   max-width: 90%;
@@ -27,17 +102,39 @@ footer {
 /* FORM  */
 .form_choose {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.select_box {
   gap: 1rem;
 }
-.select_box label {
+.clothes_box {
+  gap: 1rem;
+  display: flex;
+}
+.clothes_box label {
   color: rgb(235, 199, 199);
+}
+.select_box {
+  display: flex;
+  flex-direction: column;
 }
 .form_choose select {
   flex-basis: 30%;
+}
+
+/* PARTE DI LUOGO E DATA  */
+.situation_box {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.date_box {
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
 }
 
 /* SLOT PART  */
@@ -52,6 +149,19 @@ footer {
   background-color: white;
   border-radius: 25px;
   padding: 2rem;
+}
+.box_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.button {
+  padding: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: blue;
+  color: yellow;
 }
 
 /* RESPONSE PART  */

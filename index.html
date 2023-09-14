@@ -15,45 +15,64 @@
     <main>
       <div class="container">
         <div class="row">
+          <div class="loader">
+            <div class="loading hidden" id="loading">
+              <span class="loading-message">Loading...</span>
+            </div>
+          </div>
+          <!-- <div class="loading hidden" id="loading">
+            <p class="loading-message">loading...</p>
+          </div> -->
           <div class="col_choose">
             <form class="form_choose">
-              <div class="select_box">
-                <label for="superiore"> Capo superiore </label>
-                <select name="superiore" id="superiore">
-                  <option value="vestito">vestito</option>
-                  <option value="camicia">camicia</option>
-                  <option value="maglietta">maglietta</option>
-                  <option value="polo">polo</option>
-                  <option value="random">random</option>
-                </select>
-              </div>
+              <div class="clothes_box">
+                <div class="select_box">
+                  <label for="superiore"> Capo superiore </label>
+                  <select name="superiore" id="superiore">
+                    <option value="vestito">vestito</option>
+                    <option value="camicia">camicia</option>
+                    <option value="maglietta">maglietta</option>
+                    <option value="polo">polo</option>
+                    <option value="random" selected>random</option>
+                  </select>
+                </div>
+                <div class="select_box">
+                  <label for="superiore"> Capo inferiore </label>
+                  <select name="inferiore" id="inferiore">
+                    <option value="pantalone">pantalone</option>
+                    <option value="gonna">gonna</option>
+                    <option value="shorts">shorts</option>
+                    <option value="jeans">jeans</option>
+                    <option value="random" selected>random</option>
+                  </select>
+                </div>
 
-              <div class="select_box">
-                <label for="superiore"> Capo inferiore </label>
-                <select name="inferiore" id="inferiore">
-                  <option value="pantalone">pantalone</option>
-                  <option value="gonna">gonna</option>
-                  <option value="shorts">shorts</option>
-                  <option value="jeans">jeans</option>
-                  <option value="random">random</option>
-                </select>
+                <div class="select_box">
+                  <label for="superiore"> Scarpa </label>
+                  <select name="scarpe" id="scarpe">
+                    <option value="sandali">sandali</option>
+                    <option value="sneakers">sneakers</option>
+                    <option value="tacchi">tacchi</option>
+                    <option value="pelle">scarpa in pelle</option>
+                    <option value="random" selected>random</option>
+                  </select>
+                </div>
               </div>
-
-              <div class="select_box">
-                <label for="superiore"> Scarpa </label>
-                <select name="scarpe" id="scarpe">
-                  <option value="sandali">sandali</option>
-                  <option value="sneakers">sneakers</option>
-                  <option value="tacchi">tacchi</option>
-                  <option value="pelle">scarpa in pelle</option>
-                  <option value="random">random</option>
-                </select>
+              <div class="situation_box">
+                <input type="text" placeholder="In che città sei ?" />
+                <div class="date_box">
+                  <label for="data">Quando vuoi indossare il tuo outfit?</label>
+                  <input type="date" name="data" id="data" />
+                </div>
               </div>
             </form>
             <div class="col_slot">
               <div class="slot slot_up">?</div>
               <div class="slot slot_down">?</div>
               <div class="slot slot_shoes">?</div>
+            </div>
+            <div class="box_button">
+              <button id="button" class="button">Crea il tuo stile</button>
             </div>
           </div>
           <div class="col">
